@@ -1,6 +1,6 @@
 # Rise Labs Testnet Explorer API Client
 
-A production-ready Python client for extracting data from the Rise Labs testnet BlockScout API.
+A Python client for extracting data from the Risechain Labs testnet BlockScout API.
 
 ## Features
 
