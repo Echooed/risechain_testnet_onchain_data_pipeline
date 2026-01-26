@@ -1,4 +1,4 @@
-# Rise Labs Testnet Explorer API Client
+# Risechain Labs Testnet Explorer API Client
 
 A Python client for extracting data from the Risechain Labs testnet BlockScout API.
 
