@@ -4,12 +4,12 @@ A Python client for extracting data from the Risechain Labs testnet BlockScout A
 
 ## Features
 
-- ✅ **Comprehensive API Coverage**: Supports all major API modules (Account, Block, Contract, Transaction, Logs, Token, Stats)
-- ✅ **Production-Ready**: Includes retry logic, error handling, and logging
-- ✅ **Type Hints**: Full type annotations for better IDE support
-- ✅ **Context Manager Support**: Proper resource management
-- ✅ **Configurable**: Easy configuration for timeout, retries, and base URL
-- ✅ **Well-Documented**: Detailed docstrings for all methods
+-  **Comprehensive API Coverage**: Supports all major API modules (Account, Block, Contract, Transaction, Logs, Token, Stats)
+-  **Production-Ready**: Includes retry logic, error handling, and logging
+-  **Type Hints**: Full type annotations for better IDE support
+-  **Context Manager Support**: Proper resource management
+-  **Configurable**: Easy configuration for timeout, retries, and base URL
+-  **Well-Documented**: Detailed docstrings for all methods
 
 ## Installation
 
