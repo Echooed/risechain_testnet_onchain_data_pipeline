@@ -1,8 +1,3 @@
-"""
-Rise Labs Testnet Data Extractor
-Extracts data from the API and saves it to various formats (JSON, CSV)
-"""
-
 import json
 import csv
 import os
@@ -16,17 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class DataExtractor:
-    """
-    Extracts blockchain data and saves it to files.
-    """
-
     def __init__(self, output_dir: str = "extracted_data"):
-        """
-        Initialize the data extractor.
-
-        Args:
-            output_dir: Directory where extracted data will be saved
-        """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
         self.client = RiseExplorerClient()
@@ -90,18 +75,6 @@ class DataExtractor:
             include_tokens: bool = True,
             max_transactions: int = 100
     ) -> Dict[str, Path]:
-        """
-        Extract all data for an account and save to files.
-
-        Args:
-            address: Account address
-            include_transactions: Whether to fetch transactions
-            include_tokens: Whether to fetch token data
-            max_transactions: Maximum number of transactions to fetch
-
-        Returns:
-            Dictionary of saved file paths
-        """
         logger.info(f"Extracting account data for {address}")
         saved_files = {}
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -187,17 +160,6 @@ class DataExtractor:
             contract_address: Optional[str] = None,
             max_transfers: int = 1000
     ) -> Dict[str, Path]:
-        """
-        Extract token transfers for an address.
-
-        Args:
-            address: Account address
-            contract_address: Optional token contract filter
-            max_transfers: Maximum number of transfers to fetch
-
-        Returns:
-            Dictionary of saved file paths
-        """
         logger.info(f"Extracting token transfers for {address}")
         saved_files = {}
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -246,15 +208,6 @@ class DataExtractor:
         return saved_files
 
     def extract_contract_data(self, contract_address: str) -> Dict[str, Path]:
-        """
-        Extract contract source code and ABI.
-
-        Args:
-            contract_address: Contract address
-
-        Returns:
-            Dictionary of saved file paths
-        """
         logger.info(f"Extracting contract data for {contract_address}")
         saved_files = {}
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
